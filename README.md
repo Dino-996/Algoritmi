@@ -54,7 +54,7 @@ Il costo nel caso pessimo della ricerca binaria è O(log n), dove "n" è la lung
 
 ## Come utilizzare le implementazioni
 
-Le implementazioni di questi algoritmi sono fornite in linguaggio Java e possono essere utilizzate come segue:
+Le implementazioni di questi algoritmi sono fornite in linguaggio JavaScript e possono essere utilizzate come segue:
 
     1. Scarica il file sorgente desiderato.
     2. Esegui il file con node: node <nomefile>.
