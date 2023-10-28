@@ -1,6 +1,6 @@
 # Algoritmi e strutture dati
 
-Questo repository contiene implementazioni e descrizioni di vari algoritmi:
+Questo repository contiene implementazioni e descrizioni di vari algoritmi e strutture dati:
 
 ## Insertion Sort
 
