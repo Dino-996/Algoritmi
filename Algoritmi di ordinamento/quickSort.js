@@ -1,30 +1,40 @@
-function partition(arr, low, high) {
+/**
+ * @author Davide Sabia <davidesabia22@gmail.com>
+ * @description Il Quick Sort è un algoritmo di ordinamento rapido basato sul paradigma divide et impera. È noto per la sua efficienza e ampiamente utilizzato in molte librerie di programmazione.
+ * @param {Array} A 
+ * @param {number} p 
+ * @param {number} r 
+ * @returns
+ */
 
-    let pivot = arr[high];
-    let i = low - 1;
+function partition(A, p, r) {
 
-    for (let j = low; j <= high - 1; j++) {
+    let pivot = A[r];
+    let i = p - 1;
 
-        if (arr[j] < pivot) {
-            i++;
-            [arr[i], arr[j]] = [arr[j], arr[i]];
+    for (let j = p; j <= r - 1; j++) {
+
+        if (A[j] < pivot) {
+            i = i + 1;
+            [A[i], A[j]] = [A[j], A[i]];
         }
     }
 
-    [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+    [A[i + 1], A[r]] = [A[r], A[i + 1]];
     return i + 1;
 }
 
-function quickSort(arr, low, high) {
-    if (low < high) {
-        let pi = partition(arr, low, high);
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+function quickSort(A, p, r) {
+    if (p < r) {
+        let q = partition(A, p, r);
+        quickSort(A, p, q - 1);
+        quickSort(A, q + 1, r);
     }
 }
 
-let arr = [10, 7, 8, 9, 1, 5];
-let N = arr.length;
+let A = [10, 7, 8, 9, 1, 5];
+let p = 0;
+let r = A.length - 1;
 
-quickSort(arr, 0, N - 1);
-console.log("Sorted array: ", arr);
+quickSort(A, p, r);
+console.log("Array ordinato: ", A);

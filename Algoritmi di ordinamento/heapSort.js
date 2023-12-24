@@ -1,56 +1,56 @@
-function heapSort(arr) {
-    let N = arr.length;
+/**
+ * @author Davide Sabia <davidesabia22@gmail.com>
+ * @description L'Heap Sort è un algoritmo di ordinamento basato su una struttura dati chiamata heap. È noto per la sua efficienza e capacità di ordinare sequenze in loco.
+ * @param {Array} A 
+ * @returns
+ */
 
-    for (let i = Math.floor(N / 2) - 1; i >= 0; i--) {
-        heapify(arr, N, i);
+function left(i) {
+    return 2 * i + 1;
+}
+
+function right(i) {
+    return 2 * i + 2;
+}
+
+function maxHeapify(A, heapSize, i) {
+    const l = left(i);
+    const r = right(i);
+    let max = i;
+
+    if (l < heapSize && A[l] > A[max]) {
+        max = l;
     }
 
-    for (let i = N - 1; i > 0; i--) {
+    if (r < heapSize && A[r] > A[max]) {
+        max = r;
+    }
 
-        let temp = arr[0];
-        arr[0] = arr[i];
-        arr[i] = temp;
-
-        heapify(arr, i, 0);
+    if (max !== i) {
+        const temp = A[i];
+        A[i] = A[max];
+        A[max] = temp;
+        maxHeapify(A, heapSize, max);
     }
 }
 
-
-function heapify(arr, N, i) {
-    let largest = i;
-    let l = 2 * i + 1;
-    let r = 2 * i + 2;
-
-    if (l < N && arr[l] > arr[largest]) { 
-        largest = l; 
-    }
-
-
-    if (r < N && arr[r] > arr[largest]) { 
-        argest = r; 
-    }
-
-    if (largest != i) {
-        let swap = arr[i];
-        arr[i] = arr[largest];
-        arr[largest] = swap;
-
-        heapify(arr, N, largest);
+function buildMaxHeap(A) {
+    let heapSize = A.length;
+    for (let i = Math.floor(heapSize / 2); i >= 0; i--) {
+        maxHeapify(A, heapSize, i);
     }
 }
 
-function printArray(arr) {
-    let elem = [];
-    for (let i = 0; i < arr.length; ++i) {
-        elem.push(arr[i]);
+function heapSort(A) {
+    let heapSize = A.length;
+    buildMaxHeap(A);
+    for (let i = heapSize - 1; i > 0; i--) {
+        [A[0], A[i]] = [A[i], A[0]];
+        heapSize = heapSize - 1;
+        maxHeapify(A, i, 0);
     }
-    return elem;
 }
 
-
-let arr = [12, 11, 13, 5, 6, 7];
-let N = arr.length;
-
-heapSort(arr);
-
-console.log("Sorted array is: ", printArray(arr, N));
+const A = [10, 21, 30, 19, 23, 12];
+buildMaxHeap(A)
+console.log("Risultati: ", A);

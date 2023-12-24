@@ -1,20 +1,27 @@
-function insertionSort(a, n) {
-    var i, key, j;
+/**
+ * @author Davide Sabia <davidesabia22@gmail.com>
+ * @description L'Insertion Sort è un algoritmo di ordinamento semplice ed efficiente che costruisce una sequenza ordinata uno alla volta. È particolarmente utile per piccoli insiemi di dati.
+ * @param {Array} A
+ * @param {number} n
+ * @returns
+ */
+
+function insertionSort(A, n) {
+    let i, key, j;
+
     for (i = 1; i < n; i++) {
-        key = a[i];
+        key = A[i];
         j = i - 1;
-        while (j >= 0 && a[j] > key) {
-            a[j + 1] = a[j];
+
+        while (j >= 0 && A[j] > key) {
+            A[j + 1] = A[j];
             j = j - 1;
         }
-        a[j + 1] = key;
+
+        A[j + 1] = key;
     }
 }
-function printArray(arr, n) {
-    insertionSort(arr, n);
-    for (var i = 0; i < n; i++) {
-        console.log("Array ordinato: ", arr[i]);
-    }
-}
-var c = [9, 8, 7, 6, 5, 4, 3, 2, 1];
-console.log(printArray(c, c.length));
+
+const A = [5, 4, 3, 2, 1];
+insertionSort(A, A.length)
+console.log(A);

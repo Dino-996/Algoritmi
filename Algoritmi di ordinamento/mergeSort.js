@@ -1,4 +1,14 @@
-function merge(arr, p, q, r) {
+/**
+ * @author Davide Sabia <davidesabia22@gmail.com>
+ * @description Il Merge Sort è un algoritmo di ordinamento stabile che utilizza la tecnica del divide et impera per ordinare una sequenza. È noto per la sua stabilità e prestazioni affidabili.
+ * @param {Array} A
+ * @param {number} p
+ * @param {number} q
+ * @param {number} r
+ * @returns
+ */
+
+function merge(A, p, q, r) {
 
     let n1 = q - p + 1;
     let n2 = r - q;
@@ -6,11 +16,11 @@ function merge(arr, p, q, r) {
     let R = new Array(n2);
 
     for (let i = 0; i < n1; i++) {
-        L[i] = arr[p + i];
+        L[i] = A[p + i];
     }
 
     for (let j = 0; j < n2; j++) {
-        R[j] = arr[q + 1 + j];
+        R[j] = A[q + 1 + j];
     }
 
     let i = 0;
@@ -18,45 +28,44 @@ function merge(arr, p, q, r) {
     let k = p;
 
     while (i < n1 && j < n2) {
+
         if (L[i] <= R[j]) {
-            arr[k] = L[i];
+            A[k] = L[i];
             i++;
         }
+
         else {
-            arr[k] = R[j];
+            A[k] = R[j];
             j++;
         }
         k++;
     }
+
     while (i < n1) {
-        arr[k] = L[i];
+        A[k] = L[i];
         i++;
         k++;
     }
+
     while (j < n2) {
-        arr[k] = R[j];
+        A[k] = R[j];
         j++;
         k++;
     }
 }
 
-function mergeSort(arr, p, r) {
+function mergeSort(A, p, r) {
     if (p < r) {
-        var q = Math.floor((p + r) / 2);
-        mergeSort(arr, p, q);
-        mergeSort(arr, q + 1, r);
-        merge(arr, p, q, r);
+        let q = Math.floor((p + r) / 2);
+        mergeSort(A, p, q);
+        mergeSort(A, q + 1, r);
+        merge(A, p, q, r);
     }
 }
 
-function printArray(arr, p, r) {
-    mergeSort(arr, p, r);
-    for (var i = 0; i < arr.length; i++) {
-        console.log("Risultato: ", arr[i]);
-    }
-}
-
-var arr = [12, 3, 7, 9, 14, 6, 11, 2];
-var p = 0;
-var r = array.length;
-printArray(arr);
+const A = [12, 3, 7, 9];
+const p = 0;
+const r = A.length - 1;
+console.log("Array non ordinato: ", A)
+mergeSort(A, p, r);
+console.log("Array ordinato: ", A)
