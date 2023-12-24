@@ -12,16 +12,18 @@ function binarySearch(A, key, low, high) {
     if (low > high) {
         return -1;
     }
-    var n = Math.floor((low + high) / 2);
+
+    let n = Math.floor((low + high) / 2);
+
     if (key === A[n]) {
         return n;
     }
+    
+    else if (A[n] < key) {
+        return binarySearch(A, key, n + 1, high);
+    }
+
     else {
-        if (A[n] < key) {
-            return binarySearch(A, key, n + 1, high);
-        }
-        else {
-            return binarySearch(A, key, low, n - 1);
-        }
+        return binarySearch(A, key, low, n - 1);
     }
 }

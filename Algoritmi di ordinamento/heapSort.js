@@ -53,4 +53,4 @@ function heapSort(A) {
 
 const A = [10, 21, 30, 19, 23, 12];
 buildMaxHeap(A)
-console.log("Risultati: ", A);
+console.log("Array ordinato: ", A);
