@@ -52,6 +52,16 @@ La ricerca binaria è un algoritmo di ricerca che opera su sequenze ordinate. Di
 ### Costo nel Caso Pessimo
 Il costo nel caso pessimo della ricerca binaria è O(log n), dove "n" è la lunghezza della sequenza in cui si sta cercando.
 
+## Ricerca per interpolazione
+
+Funziona su una lista ordinata e stima la posizione dell'elemento desiderato in base ai valori degli estremi.
+
+### Implementazione
+- [InterpolationSearch.js](https://github.com/Dino-996/Algoritmi/blob/resume_main/Algoritmi%20di%20ricerca/interpolationSearch.js)
+
+### Costo nel caso pessimo
+Il costo nel caso pessimo della ricerca per intepolazione è O(log n log n), dove "n" è la lunghezza della sequenza in cui si sta cercando.
+
 ## Come utilizzare le implementazioni
 
 Le implementazioni di questi algoritmi sono fornite in linguaggio JavaScript e possono essere utilizzate come segue:
