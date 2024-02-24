@@ -1,12 +1,16 @@
 /**
+ * @file
  * @author Davide Sabia <davidesabia22@gmail.com>
- * @description Partition partizionare l’array in due parti, in modo che tutti gli elementi a sinistra del pivot siano minori del pivot e tutti gli elementi a destra del pivot siano maggiori del pivot.
- * @param {Array} A 
- * @param {number} p 
- * @param {number} r 
- * @returns
+ * @description Questa funzione partiziona un array in due parti, in modo che tutti gli elementi a sinistra del pivot siano minori del pivot e tutti gli elementi a destra del pivot siano maggiori del pivot. Il pivot è l'ultimo elemento dell'array.
  */
 
+/** 
+* @function partition
+* @param {Array} A - L'array da partizionare.
+* @param {number} p - L'indice iniziale da cui iniziare la partizione.
+* @param {number} r - L'indice finale dell'array, che funge anche da pivot.
+* @returns {number} - Restituisce l'indice del pivot nell'array partizionato.
+*/
 function partition(A, p, r) {
 
     let pivot = A[r];

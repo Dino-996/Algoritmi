@@ -69,7 +69,7 @@ L’algoritmo di Rabin Karp è un algoritmo di ricerca di pattern in una stringa
 * Un pattern di lunghezza m che rappresenta la sequenza di caratteri da trovare nel testo
 
 ### Implementazione
-- [RabinKarp.js](https://github.com/Dino-996/Algoritmi/blob/resume_main/Algoritmi%20di%20ricerca/interpolationSearch.js)
+- [RabinKarp.js](https://github.com/Dino-996/Algoritmi/blob/resume_main/Algoritmi%20di%20ricerca/rabin_karp/rabinkarpSearch.js)
 
 ### Costo nel caso pessimo
 Il costo nel caso pessimo dell'algoritmo di Rabin-Karp è O((n - m+1)m), dove "n" è la lunghezza del testo e "m" è la lunghezza del pattern.

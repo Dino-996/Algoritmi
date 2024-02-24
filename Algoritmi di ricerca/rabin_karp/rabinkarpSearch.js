@@ -1,13 +1,18 @@
 /**
+ * @file
  * @author Davide Sabia <davidesabia22@gmail.com>
- * @description La funzione implementa l’algoritmo di Rabin-Karp, un algoritmo di ricerca di stringhe che utilizza l’hashing per trovare le occorrenze di una stringa modello in una stringa di testo.
- * @param {string} testo 
- * @param {string} modello
- * @returns {number}
+ * @description Implementa l’algoritmo di Rabin-Karp, un algoritmo di ricerca di stringhe che utilizza l’hashing per trovare le occorrenze di una stringa modello in una stringa di testo.
  */
 
 const calcolaHash = require('./calcolaHash');
 
+/**
+ * @function ricercaRabinKarp
+ * @description Implementa l'algoritmo di Rabin-Karp per la ricerca di stringhe.
+ * @param {string} testo - La stringa di testo in cui cercare.
+ * @param {string} modello - La stringa modello da cercare nel testo.
+ * @returns {void} La funzione non restituisce nulla ma stampa le posizioni in cui il modello è stato trovato nel testo.
+ */
 function ricercaRabinKarp(testo, modello) {
   const m = modello.length;
   const n = testo.length;
@@ -34,8 +39,3 @@ function ricercaRabinKarp(testo, modello) {
     }
   }
 }
-
-// Esempio di utilizzo
-const testo = "ababcababcabcabc";
-const modello = "abcabc";
-ricercaRabinKarp(testo, modello);

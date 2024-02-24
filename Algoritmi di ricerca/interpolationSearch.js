@@ -1,11 +1,16 @@
 /**
+ * @file
  * @author Davide Sabia <davidesabia22@gmail.com>
- * @description Funziona su un'array ordinato e stima la posizione dell'elemento desiderato in base ai valori degli estremi.
- * @param {Array} A 
- * @param {number} key 
- * @returns {number}
+ * @description Implementa l'algoritmo di ricerca per interpolazione che funziona su un array ordinato e stima la posizione dell'elemento desiderato in base ai valori degli estremi.
  */
 
+/**
+ * @function interpolationSearch
+ * @description Implementa l'algoritmo di ricerca per interpolazione. Funziona su un array ordinato e stima la posizione dell'elemento desiderato in base ai valori degli estremi.
+ * @param {Array} A - L'array in cui cercare.
+ * @param {number} key - Il valore da cercare.
+ * @returns {number} L'indice in cui si trova il valore cercato nell'array. Se il valore non è presente, restituisce -1.
+ */
 function interpolationSearch(A, key) {
     const low = 0;
     const high = A.length - 1;
@@ -28,8 +33,3 @@ function interpolationSearch(A, key) {
     return -1;
 }
 
-// Esempio di utilizzo
-const A = [1, 2, 3, 4, 5];
-const key = 3;
-const result = interpolationSearch(A, key);
-console.log(result === -1 ? 'Valore non presente' : `Valore in posizione ${result}`);

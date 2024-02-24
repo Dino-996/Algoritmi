@@ -1,8 +1,15 @@
 /**
+ * @file
  * @author Davide Sabia <davidesabia22@gmail.com>
- * @description L’obiettivo della funzione è di mantenere la proprietà dell’heap massimo.
- * @param {Array} A
- * @returns {Array}
+ * @description L'obiettivo della funzione è di mantenere la proprietà dell'heap massimo.
+ */
+
+ /**
+ * @function maxHeapify
+ * @param {Array} A - L'array rappresentante l'heap.
+ * @param {number} heapSize - La dimensione attuale dell'heap.
+ * @param {number} i - L'indice del nodo da cui iniziare il processo di massimizzazione.
+ * @returns {void} - Non restituisce nulla. Modifica direttamente l'array fornito.
  */
 
 function maxHeapify(A, heapSize, i) {
@@ -29,10 +36,10 @@ function maxHeapify(A, heapSize, i) {
 }
 
 /**
- * @author Davide Sabia <davidesabia22@gmail.com>
- * @description Restituisce l’indice del figlio sinistro del nodo all’indice i.
- * @param {number} i 
- * @returns {number}
+ * @function left
+ * @description Restituisce l'indice del figlio sinistro del nodo all'indice i.
+ * @param {number} i - L'indice del nodo.
+ * @returns {number} - L'indice del figlio sinistro.
  */
 
 function left(i) {
@@ -40,11 +47,11 @@ function left(i) {
 }
 
 /**
- * @author Davide Sabia <davidesabia22@gmail.com>
- * @description Restituisce l’indice del figlio destro del nodo all’indice i;
- * @param {number} i
- * @returns {number}
-*/
+ * @function right
+ * @description Restituisce l'indice del figlio destro del nodo all'indice i.
+ * @param {number} i - L'indice del nodo.
+ * @returns {number} - L'indice del figlio destro.
+ */
 
 function right(i) {
     return 2 * i + 2;

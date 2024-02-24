@@ -1,9 +1,15 @@
 /**
+ * @file
  * @author Davide Sabia <davidesabia22@gmail.com>
  * @description L'Heap Sort è un algoritmo di ordinamento basato su una struttura dati chiamata heap. È noto per la sua efficienza e capacità di ordinare sequenze in loco.
- * @param {Array} A
- * @returns
  */
+
+ /**
+ * @function heapSort
+ * @param {Array} A - L'array da ordinare.
+ * @returns {void} - Non restituisce nulla. Modifica direttamente l'array fornito.
+ */
+
 
 const buildMaxHeap = require('./buildMaxHeap');
 const maxHeapify = require('./maxHeapify');
@@ -17,8 +23,3 @@ function heapSort(A) {
         maxHeapify(A, heapSize, 0);
     }
 }
-
-// Esempio di utilizzo
-const A = [10, 9, 8, 7, 6, 12];
-heapSort(A);
-console.log("Array ordinato: ", A);

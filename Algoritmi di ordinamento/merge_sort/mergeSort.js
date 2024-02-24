@@ -1,10 +1,15 @@
 /**
+ * @file
  * @author Davide Sabia <davidesabia22@gmail.com>
  * @description Il merge sort è un algoritmo di ordinamento stabile che utilizza la tecnica del divide et impera per ordinare una sequenza. È noto per la sua stabilità e prestazioni affidabili.
- * @param {Array} A
- * @param {number} p
- * @param {number} r
- * @returns
+ */
+
+/** 
+ * @function mergeSort
+ * @param {Array} A - L'array da ordinare.
+ * @param {number} p - L'indice di partenza dell'array.
+ * @param {number} r - L'indice di fine dell'array.
+ * @returns {void} - Non restituisce nulla. Modifica direttamente l'array fornito.
  */
 
 const merge = require('./merge');
@@ -17,10 +22,3 @@ function mergeSort(A, p, r) {
         merge(A, p, q, r);
     }
 }
-
-// Esempio di utilizzo
-const A = [12, 3, 7, 9];
-const p = 0;
-const r = A.length - 1;
-mergeSort(A, p, r);
-console.log("Array ordinato: ", A)

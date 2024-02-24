@@ -1,13 +1,17 @@
 /**
+ * @file
  * @author Davide Sabia <davidesabia22@gmail.com>
- * @description La funzione merge combina due sotto-array ordinati in un unico array ordinato.
- * @param {Array} A
- * @param {number} p
- * @param {number} q
- * @param {number} r
- * @returns
+ * @description Questa funzione combina due sotto-array ordinati (definiti dagli indici p, q, r) in un unico array ordinato. Modifica l'array originale.
  */
 
+/** 
+ * @function merge
+ * @param {Array} A - L'array che contiene i sotto-array da unire.
+ * @param {number} p - L'indice iniziale del primo sotto-array.
+ * @param {number} q - L'indice finale del primo sotto-array e l'indice iniziale del secondo sotto-array.
+ * @param {number} r - L'indice finale del secondo sotto-array.
+ * @returns {void} - Questa funzione non restituisce nulla; modifica l'array in-place.
+*/
 function merge(A, p, q, r) {
 
     let n1 = q - p + 1;
