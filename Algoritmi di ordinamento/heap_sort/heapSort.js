@@ -23,3 +23,5 @@ function heapSort(A) {
         maxHeapify(A, heapSize, 0);
     }
 }
+
+module.exports = heapSort;

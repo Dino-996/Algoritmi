@@ -20,3 +20,5 @@ function quickSort(A, p, r) {
         quickSort(A, q + 1, r);
     }
 }
+
+module.exports = quickSort;

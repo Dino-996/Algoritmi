@@ -11,21 +11,31 @@
  * @param {number} key - Il valore da cercare.
  * @returns {number} L'indice in cui si trova il valore cercato nell'array. Se il valore non è presente, restituisce -1.
  */
+
 function interpolationSearch(A, key) {
-    const low = 0;
-    const high = A.length - 1;
+    let low = 0;
+    let high = A.length - 1;
 
     while (low <= high && key >= A[low] && key <= A[high]) {
+        if (low === high) {
+            if (A[low] === key) {
+                return low;
+            } else {
+                return -1;
+            }
+        }
 
-        let position = Math.floor(low + (key - A[low]));
+        let position = low + Math.floor(((key - A[low]) * (high - low)) / (A[high] - A[low]));
 
         if (A[position] === key) {
             return position;
-
-        } else if (A[position] < key) {
+        }
+        
+        else if (A[position] < key) {
             low = position + 1;
-
-        } else {
+        } 
+        
+        else {
             high = position - 1;
         }
     }
@@ -33,3 +43,4 @@ function interpolationSearch(A, key) {
     return -1;
 }
 
+module.exports = interpolationSearch;

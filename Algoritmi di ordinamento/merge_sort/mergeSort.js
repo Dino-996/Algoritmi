@@ -22,3 +22,5 @@ function mergeSort(A, p, r) {
         merge(A, p, q, r);
     }
 }
+
+module.exports = mergeSort;

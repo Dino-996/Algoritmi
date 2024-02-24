@@ -26,3 +26,5 @@ function insertionSort(A, n) {
         A[j + 1] = key;
     }
 }
+
+module.exports = insertionSort;

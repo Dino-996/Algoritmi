@@ -13,6 +13,7 @@
  * @param {number} high - L'indice finale fino a cui eseguire la ricerca.
  * @returns {number} L'indice in cui si trova il valore cercato nell'array. Se il valore non è presente, restituisce -1.
  */
+
 function binarySearch(A, key, low, high) {
     if (low > high) {
         return -1;
@@ -32,3 +33,5 @@ function binarySearch(A, key, low, high) {
         return binarySearch(A, key, low, n - 1);
     }
 }
+
+module.exports = binarySearch;
