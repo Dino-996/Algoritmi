@@ -22,6 +22,8 @@ function insertionSort(A, n) {
     }
 }
 
+// Esempio di utilizzo
+
 const A = [5, 4, 3, 2, 1];
 insertionSort(A, A.length)
 console.log(A);

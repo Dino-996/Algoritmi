@@ -1,6 +1,6 @@
 /**
  * @author Davide Sabia <davidesabia22@gmail.com>
- * @description Funziona su una lista ordinata e stima la posizione dell'elemento desiderato in base ai valori degli estremi.
+ * @description Funziona su un'array ordinato e stima la posizione dell'elemento desiderato in base ai valori degli estremi.
  * @param {Array} A 
  * @param {number} key 
  * @returns {number}
@@ -27,3 +27,9 @@ function interpolationSearch(A, key) {
 
     return -1;
 }
+
+// Esempio di utilizzo
+const A = [1, 2, 3, 4, 5];
+const key = 3;
+const result = interpolationSearch(A, key);
+console.log(result === -1 ? 'Valore non presente' : `Valore in posizione ${result}`);

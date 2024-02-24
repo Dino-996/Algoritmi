@@ -7,22 +7,7 @@
  * @returns
  */
 
-function partition(A, p, r) {
-
-    let pivot = A[r];
-    let i = p - 1;
-
-    for (let j = p; j <= r - 1; j++) {
-
-        if (A[j] < pivot) {
-            i = i + 1;
-            [A[i], A[j]] = [A[j], A[i]];
-        }
-    }
-
-    [A[i + 1], A[r]] = [A[r], A[i + 1]];
-    return i + 1;
-}
+const partition = require('./partition');
 
 function quickSort(A, p, r) {
     if (p < r) {
@@ -32,9 +17,9 @@ function quickSort(A, p, r) {
     }
 }
 
+// Esempio di utilizzo
 let A = [10, 7, 8, 9, 1, 5];
 let p = 0;
 let r = A.length - 1;
-
 quickSort(A, p, r);
 console.log("Array ordinato: ", A);

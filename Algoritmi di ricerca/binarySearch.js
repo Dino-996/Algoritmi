@@ -27,3 +27,11 @@ function binarySearch(A, key, low, high) {
         return binarySearch(A, key, low, n - 1);
     }
 }
+
+// Esempio di utilizzo
+const A = [1, 2, 3, 4, 5];
+const key = 3;
+const low = 0;
+const high = A.length - 1;
+const result = binarySearch(A, key, low, high);
+console.log(result === -1 ? 'Valore non presente' : `Valore in posizione ${result}`);
