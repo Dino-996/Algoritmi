@@ -2,7 +2,6 @@
   "name": "algoritmi",
   "version": "1.0.0",
   "description": "Implementazioni e descrizioni di vari algoritmi e strutture dati.",
-  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
