@@ -14,12 +14,8 @@ yarn-error.log
 # File generati durante la build
 /build
 
-# Cartella per la copertura dei test
-/coverage
-
-# File generati durante il test
+# File generati durante i test
 *.log
-*.junit.xml
 
 # File .DS_Store generati da macOS
 .DS_Store
